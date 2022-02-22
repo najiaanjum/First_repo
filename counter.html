@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body, h1, button {
+            padding: 0;
+            margin:0;
+        }
+        .counter-wrapper {
+            /* background-color: #00f; */
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .counter {
+            border: 2px solid #000;
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 5px 5px 8px rgb(172, 172, 172);
+            /* background: #f00; */
+        }
+        .counter h1 {
+            font-size: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter-wrapper">
+        <div class="counter">
+            <h1 id="count">0</h1>
+            <button onclick="decrement()">Decrease</button>
+            <button onclick="increment()">Increase</button>
+        </div>
+
+    </div>
+    
+    <script>
+        var counter = 0;
+
+        function increment() {
+            counter++;
+            document.getElementById('count').innerText = counter;
+        }
+
+        function decrement() {
+            counter--;
+            document.getElementById('count').innerText = counter;
+        }
+
+        
+
+        // console.log(counter);
+    </script>
+</body>
+</html>
